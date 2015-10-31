@@ -1,0 +1,72 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.background-image {
+    height: auto;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../images/header.jpg) 50% top;
+    background-size: cover;
+}
+
+.site-wrap {
+    position: relative;
+    z-index: 20;
+}
+
+.hero {
+    height: 100vh;
+    text-align: center;
+}
+
+.site-header {
+}
+
+.site-header__header {
+    padding: 2vw 0;
+    background-color: white;
+    font-size: 3vw;
+}
+
+.site-header__info {
+    margin: 10vw;
+    color: rgb(175, 170, 159);
+    margin-top: -4.8vw;
+    font-size: 1.5vw;
+    font-weight: 100;
+}
+
+.info {
+    height: 40vh;
+    background-color: white;
+}
+
+.info__left {
+    width: 50vw;
+}
+
+.info__header {
+    text-align: center;
+    padding: 3vw 0;
+}
+
+.info__image {
+    width: 20vw;
+    border-radius: 50%;
+}
+.next {
+    height: 40vh;
+    background-color: #2B2C2D;
+}
