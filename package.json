@@ -1,0 +1,23 @@
+{
+  "name": "joonaspessi-static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "rm -f styles/main.css && ./node_modules/.bin/node-sass sass/index.scss > styles/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joonaspessi/joonaspessi-static.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joonaspessi/joonaspessi-static/issues"
+  },
+  "homepage": "https://github.com/joonaspessi/joonaspessi-static#readme",
+  "devDependencies": {
+    "node-sass": "^3.4.1"
+}
+}
