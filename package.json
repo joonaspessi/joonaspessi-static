@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "rm -f styles/main.css && ./node_modules/.bin/node-sass sass/index.scss > styles/main.css"
+    "sass": "rm -f css/main.css && ./node_modules/.bin/node-sass sass/index.scss > css/main.css"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/joonaspessi/joonaspessi-static#readme",
   "devDependencies": {
     "node-sass": "^3.4.1"
-}
+  },
+  "dependencies": {
+    "materialize-css": "^0.97.2"
+  }
 }
