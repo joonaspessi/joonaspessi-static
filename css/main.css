@@ -8527,3 +8527,8 @@ p {
 footer.page-footer {
   margin: 0; }
 
+.joonaspessi_section__about {
+  padding-top: 5vw; }
+  .joonaspessi_section__about img {
+    width: 20vw; }
+
