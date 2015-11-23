@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "rm -f css/main.css && ./node_modules/.bin/node-sass sass/index.scss > css/main.css"
+    "build": "./node_modules/.bin/babel scripts/init.js -t babelify -o bundle.js",
+    "sass": "rm -rf css/main.css && ./node_modules/.bin/node-sass sass/index.scss > css/main.css"
   },
   "repository": {
     "type": "git",
@@ -25,9 +25,7 @@
   },
   "dependencies": {
     "lodash": "^3.10.1",
-    "materialize-css": "^0.97.2"
-  },
-  "scripts": {
-      "build": "./node_modules/.bin/babel scripts/init.js -t babelify -o bundle.js"
+    "materialize-css": "^0.97.2",
+    "moment": "^2.10.6"
   }
 }

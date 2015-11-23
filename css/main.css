@@ -8544,6 +8544,9 @@ p {
 footer.page-footer {
   margin: 0; }
 
+.page-footer__container {
+  height: 30vh; }
+
 .joonaspessi_section__about {
   padding-top: 5vw; }
   .joonaspessi_section__about img {

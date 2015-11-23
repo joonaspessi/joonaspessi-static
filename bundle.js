@@ -11,7 +11,17 @@
             workouts: ROOT + "/api/v1/workouts"
         };
 
-        var tableItem = ["<tr>", "<td><%=date%></td>", "<td><%=name%></td>", "<td><%=distance%></td>", "<td><%=duration%></td>"].join("");
+        var tableItem = ["<tr>", "<td><%=date%></td>", "<td class=\"joonaspessi__workouts-table__name\"><%=name%></td>", "<td><%=distance%></td>", "<td><%=duration%></td>"].join("");
+
+        function secondsToHHMM(seconds) {
+            var sec_num = parseInt(seconds, 10); // don't forget the second param
+            var hours = Math.floor(sec_num / 3600);
+            var minutes = Math.floor((sec_num - hours * 3600) / 60);
+            var seconds = sec_num - hours * 3600 - minutes * 60;
+
+            var time = hours + "h " + minutes + "m";
+            return time;
+        }
 
         var tableItemTemplate = _.template(tableItem);
 
@@ -35,25 +45,25 @@
 
         getRecentRideTotals().then(function (totals) {
             var el = document.querySelector(".joonaspessi__athlete_distance");
-            el.innerHTML = (totals.distance / 1000).toFixed(0) + " km";
+            el.innerHTML = (totals.distance / 1000).toFixed(0) + "km";
             return totals;
         }).then(function (totals) {
             var el = document.querySelector(".joonaspessi__athlete_moving_time");
-            el.innerHTML = (totals.moving_time / 3600).toFixed(0) + " h";
+            el.innerHTML = (totals.moving_time / 3600).toFixed(0) + "h";
             return totals;
         }).then(function (totals) {
             var el = document.querySelector(".joonaspessi__athlete_elevation_gain");
-            el.innerHTML = totals.elevation_gain.toFixed(0) + " m";
+            el.innerHTML = totals.elevation_gain.toFixed(0) + "m";
             return totals;
         });
 
         getLatestRides().then(function (rides) {
             return rides.map(function (ride) {
                 return {
-                    date: ride.start_date_local,
+                    date: moment(ride.start_date_local).format("L"),
                     name: ride.name,
-                    distance: ride.distance,
-                    duration: ride.moving_time
+                    distance: Math.round(ride.distance / 1000) + "km",
+                    duration: secondsToHHMM(ride.moving_time)
                 };
             }).map(function (ride) {
                 return tableItemTemplate(ride);
