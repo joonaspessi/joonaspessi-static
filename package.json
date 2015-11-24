@@ -2,7 +2,7 @@
   "name": "joonaspessi-static",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build": "./node_modules/.bin/babel scripts/init.js -t babelify -o bundle.js",
     "sass": "rm -rf css/main.css && ./node_modules/.bin/node-sass sass/index.scss > css/main.css"
