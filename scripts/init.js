@@ -3,7 +3,7 @@
         $('.button-collapse').sideNav();
         $('.parallax').parallax();
 
-        const ROOT = "http://192.168.1.237:3000";
+        const ROOT = "http://5.101.106.8:3000";
         const ENDPOINTS = {
             athlete: ROOT + "/api/v1/athlete",
             workouts: ROOT + "/api/v1/workouts"
