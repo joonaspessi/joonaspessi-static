@@ -27,6 +27,7 @@
     "express": "^4.13.3",
     "lodash": "^3.10.1",
     "materialize-css": "^0.97.2",
-    "moment": "^2.10.6"
+    "moment": "^2.10.6",
+    "whatwg-fetch": "^0.10.1"
   }
 }
