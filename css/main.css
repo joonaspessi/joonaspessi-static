@@ -8513,6 +8513,9 @@ nav .brand-logo {
 p {
   line-height: 2rem; }
 
+.joonaspessi__site-container {
+  margin: 0; }
+
 .button-collapse {
   color: #26a69a; }
 
@@ -8531,6 +8534,10 @@ p {
   .parallax-container .section {
     position: absolute;
     top: 40%; } }
+
+@media only screen and (min-width: 1200px) {
+  .joonaspessi__site-container {
+    margin: 0 10vw; } }
 
 .index-header__background {
   background-color: rgba(0, 0, 0, 0.1); }

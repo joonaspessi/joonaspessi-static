@@ -10,6 +10,10 @@ p {
   line-height: 2rem;
 }
 
+.joonaspessi__site-container {
+    margin: 0;
+}
+
 .button-collapse {
   color: #26a69a;
 }
@@ -36,6 +40,12 @@ p {
 
 @media only screen and (max-width : 600px) {
 
+}
+
+@media only screen and (min-width: 1200px) {
+    .joonaspessi__site-container {
+        margin: 0 10vw;
+    }
 }
 
 .index-header__background {

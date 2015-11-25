@@ -5,7 +5,7 @@
         $('.button-collapse').sideNav();
         $('.parallax').parallax();
 
-        var ROOT = "http://192.168.1.237:3000";
+        var ROOT = "http://localhost:3000";
         var ENDPOINTS = {
             athlete: ROOT + "/api/v1/athlete",
             workouts: ROOT + "/api/v1/workouts"
